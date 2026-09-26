@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CorrectOption__c</fullName>
+    <label>CorrectOption  c</label>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition><value><fullName>A</fullName><label>A</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>B</fullName><label>B</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>C</fullName><label>C</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>D</fullName><label>D</label></value></valueSetDefinition>
+    </valueSet>
+    <trackTrending>false</trackTrending>
+</CustomField>

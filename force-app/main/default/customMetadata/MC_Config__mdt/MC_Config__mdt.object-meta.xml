@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customMetadataType>true</customMetadataType>
+    <label>MC Config</label>
+    <pluralLabel>MC Config</pluralLabel>
+    <description>Business unit and endpoint mapping, plus the send classification. Configuration as metadata so an environment change is a deployment, not an edit.</description>
+    <visibility>Public</visibility>
+</CustomObject>

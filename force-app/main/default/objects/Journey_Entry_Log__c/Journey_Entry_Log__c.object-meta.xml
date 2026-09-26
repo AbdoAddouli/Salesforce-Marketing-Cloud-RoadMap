@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Journey Entry Log</label>
+    <pluralLabel>Journey Entry Logs</pluralLabel>
+    <description>One row per journey entry decision, allowed or blocked, with the reason. Makes "why was this person messaged twice" a queryable answer.</description>
+    <visibility>Public</visibility>
+</CustomObject>

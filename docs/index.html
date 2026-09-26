@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketing Cloud Consultant Academy - Learn Marketing Cloud</title>
+  <meta name="description" content="Interactive, self-paced course: 17 modules covering both the Salesforce Marketing Cloud Engagement Consultant and Marketing Cloud Next Consultant blueprints - editions &amp; architecture, subscriber model, Data 360, deliverability, content, journeys, automation, SMS/WhatsApp, ad audiences, consent, governance, analytics, Agentforce, practical exercises, use cases and certification prep." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128640;</text></svg>" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script>
+    (function() {
+      var t = localStorage.getItem('mcc-consultant-theme');
+      if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+
+  <div class="shell">
+
+    <aside class="sidebar">
+      <!-- filled by app.js -->
+    </aside>
+
+    <div class="content">
+
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" aria-label="Menu">&#9776;</button>
+        <a class="brand" href="#/">
+          <span class="logo">&#128640;</span>
+          <span class="brand-text">
+            <b>Marketing Cloud</b><small>Consultant Academy</small>
+          </span>
+        </a>
+        <div class="tb-search">
+          <input id="topSearch" type="search" placeholder="Search lessons, concepts.  (press /)" autocomplete="off" />
+          <span class="kbd">/</span>
+        </div>
+        <div class="tb-meter" title="Roadmap progress">
+          <div class="tb-bar"><i id="topBar"></i></div>
+          <span id="topPct" class="tb-pct">0%</span>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">ðŸŒ™</button>
+      </header>
+
+      <main id="view"></main>
+
+      <footer class="footer">
+        <a href="https://github.com/AbdoAddouli/Salesforce-Marketing-Cloud-RoadMap" target="_blank" rel="noopener">AbdoAddouli/Salesforce-Marketing-Cloud-RoadMap</a>
+        <span>&middot;</span>
+        <span>Marketing Cloud Consultant learning academy &mdash; MCE + MCN tracks, API 68.0</span>
+        <span>&middot;</span>
+        <span>Progress is saved in your browser</span>
+      </footer>
+
+    </div>
+  </div>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <div style="padding:2rem;font-family:system-ui">
+      <h1>JavaScript required</h1>
+      <p>This academy renders lessons, quizzes and guides in the browser. Enable JavaScript, or read the 17 guides directly in the
+        <a href="https://github.com/AbdoAddouli/Salesforce-Marketing-Cloud-RoadMap/tree/main/developer%20Marketing%20Cloud%20Consultant%20Roadmap">developer Marketing Cloud Consultant Roadmap</a> folder.</p>
+    </div>
+  </noscript>
+
+  <script src="assets/examfacts.js"></script>
+  <script src="assets/curriculum.js"></script>
+  <script src="assets/answers.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

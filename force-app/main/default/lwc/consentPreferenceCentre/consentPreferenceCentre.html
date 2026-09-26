@@ -1,0 +1,39 @@
+<template>
+    <lightning-card title="Consent state" icon-name="utility:checkin">
+        <div class="slds-var-p-horizontal_medium">
+            <template if:true={contactId}>
+                <p class="slds-text-body_small slds-text-color_weak">
+                    Resolved from the unified profile and the consent records, not from the send log.
+                </p>
+                <template for:each={rows} for:item="row">
+                    <div key={row.channel} class="slds-var-m-bottom_medium">
+                        <div class="slds-grid slds-wrap slds-gutters_x-small">
+                            <div class="slds-col slds-size_5">
+                                <p class="slds-text-title_bold">{row.channel}</p>
+                                <p class="slds-text-body_small">{row.purpose}</p>
+                            </div>
+                            <div class="slds-col slds-size_4">
+                                <span class={row.statusClass}>{row.resolvedStatus}</span>
+                            </div>
+                            <div class="slds-col slds-size_3 slds-text-align_right">
+                                <lightning-button
+                                    data-channel={row.channel}
+                                    data-purpose={row.purpose}
+                                    data-opted-in={row.maySend}
+                                    label={row.actionLabel}
+                                    onclick={handleToggle}
+                                ></lightning-button>
+                            </div>
+                        </div>
+                        <p class="slds-text-body_small slds-text-color_weak slds-var-m-top_x-small">
+                            {row.reason}
+                        </p>
+                    </div>
+                </template>
+            </template>
+            <template if:false={contactId}>
+                <p class="slds-text-body_small">Select a contact to read their consent state.</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

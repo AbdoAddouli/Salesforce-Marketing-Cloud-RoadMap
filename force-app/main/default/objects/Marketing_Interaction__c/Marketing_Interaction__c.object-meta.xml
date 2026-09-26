@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Marketing Interaction</label>
+    <pluralLabel>Marketing Interactions</pluralLabel>
+    <description>One row per cross-channel interaction. This is the grain that makes frequency capping computable; one row per campaign cannot produce a per-contact count.</description>
+    <visibility>Public</visibility>
+</CustomObject>

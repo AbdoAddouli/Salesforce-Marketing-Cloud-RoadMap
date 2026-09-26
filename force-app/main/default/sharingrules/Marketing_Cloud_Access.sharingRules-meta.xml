@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <rules>
+        <name>Marketing_Cloud_User_Contact_Access</name>
+        <fullName>Marketing_Cloud_User_Contact_Access</fullName>
+        <object>Contact_Master__c</object>
+        <accessLevel>ReadOnly</accessLevel>
+        <filterField>Duplicate_Flag__c</filterField>
+        <filterOperation>EqualTo</filterOperation>
+        <filterValue>false</filterValue>
+        <sharedWith>
+            <queueId>Marketing_Cloud_Users</queueId>
+        </sharedWith>
+    </rules>
+    <rules>
+        <name>Marketing_Cloud_User_Sync_Log_Access</name>
+        <fullName>Marketing_Cloud_User_Sync_Log_Access</fullName>
+        <object>Data_Extension_Sync_Log__c</object>
+        <accessLevel>ReadOnly</accessLevel>
+        <filterField>Status__c</filterField>
+        <filterOperation>EqualTo</filterOperation>
+        <filterValue>Failed</filterValue>
+        <sharedWith>
+            <queueId>Marketing_Cloud_Users</queueId>
+        </sharedWith>
+    </rules>
+</SharingRules>

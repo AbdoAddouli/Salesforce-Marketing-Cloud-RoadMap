@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Decision__c</fullName>
+    <label>Decision</label>
+    <required>true</required>
+    <type>Text</type>
+    <unique>false</unique>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <value>
+                <fullName>Allowed</fullName>
+                <label>Allowed</label>
+            </value>
+            <value>
+                <fullName>Blocked</fullName>
+                <label>Blocked</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

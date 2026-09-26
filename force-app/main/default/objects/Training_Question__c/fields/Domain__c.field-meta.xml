@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Domain__c</fullName>
+    <label>Domain  c</label>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition><value><fullName>Campaign Design</fullName><label>Campaign Design</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>Data Modeling, Identity Resolution &amp; Segmentation</fullName><label>Data Modeling, Identity Resolution &amp; Segmentation</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>Platform Setup &amp; Governance</fullName><label>Platform Setup &amp; Governance</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>Consent &amp; Compliance</fullName><label>Consent &amp; Compliance</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>Agentforce &amp; AI Innovation</fullName><label>Agentforce &amp; AI Innovation</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>Analytics &amp; Performance Insights</fullName><label>Analytics &amp; Performance Insights</label></value></valueSetDefinition>
+    </valueSet>
+    <trackTrending>false</trackTrending>
+</CustomField>

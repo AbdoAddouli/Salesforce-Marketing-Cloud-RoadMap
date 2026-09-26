@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <label>Status  c</label>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition><value><fullName>Success</fullName><label>Success</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>Partial</fullName><label>Partial</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>Failed</fullName><label>Failed</label></value></valueSetDefinition>
+    </valueSet>
+    <trackTrending>false</trackTrending>
+</CustomField>

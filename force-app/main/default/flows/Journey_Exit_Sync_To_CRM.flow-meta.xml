@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>68.0</apiVersion>
+    <description>Journey exit sync back to Salesforce. Runs when a journey entry decision is logged, and writes the outcome onto the contact so the CRM holds the current marketing state. A blocking decision is a write, not only an event: if the event fires and the record is never updated, the CRM and the engagement layer disagree permanently.</description>
+    <environments>Default</environments>
+    <interviewLabel>Journey Exit Sync To CRM {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Journey Exit Sync To CRM</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Entry_Is_Blocked</targetReference>
+        </connector>
+    </start>
+    <decisions>
+        <name>Entry_Is_Blocked</name>
+        <label>Was the entry blocked?</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <defaultConnectorLabel>Entry allowed</defaultConnectorLabel>
+        <defaultConnector>
+            <targetReference>Set_Engaged_State</targetReference>
+        </defaultConnector>
+        <connector>
+            <targetReference>Set_Suppressed_State</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Decision__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Blocked</stringValue>
+            </value>
+        </filters>
+    </decisions>
+    <decisions>
+        <name>Has_Contact</name>
+        <label>Is there a contact to update?</label>
+        <locationX>176</locationX>
+        <locationY>454</locationY>
+        <defaultConnectorLabel>No contact, nothing to write</defaultConnectorLabel>
+        <defaultConnector>
+            <targetReference>Completed</targetReference>
+        </defaultConnector>
+        <connector>
+            <targetReference>Apply_Update</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Contact__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+    </decisions>
+    <assignments>
+        <name>Set_Suppressed_State</name>
+        <label>Blocked entry: flag the profile for review</label>
+        <locationX>176</locationX>
+        <locationY>334</locationY>
+        <assignmentItems>
+            <assignToReference>updateInput.DoNotMarket__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Has_Contact</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Engaged_State</name>
+        <label>Allowed entry: stamp the last engaged time</label>
+        <locationX>528</locationX>
+        <locationY>158</locationY>
+        <assignmentItems>
+            <assignToReference>updateInput.LastEngagedAt__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Has_Contact</targetReference>
+        </connector>
+    </assignments>
+    <recordUpdates>
+        <name>Apply_Update</name>
+        <label>Write the outcome to the contact</label>
+        <locationX>176</locationX>
+        <locationY>578</locationY>
+        <connector>
+            <targetReference>Completed</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Log_Fault</targetReference>
+        </faultConnector>
+        <inputReference>updateInput</inputReference>
+        <object>Contact_Master__c</object>
+    </recordUpdates>
+    <assignments>
+        <name>Log_Fault</name>
+        <label>Log the failure</label>
+        <locationX>176</locationX>
+        <locationY>700</locationY>
+        <assignmentItems>
+            <assignToReference>errorMessage</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Completed</targetReference>
+        </connector>
+    </assignments>
+    <variables>
+        <name>updateInput</name>
+        <dataType>Contact_Master__c</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>errorMessage</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <statuses>
+        <name>Completed</name>
+        <label>Completed</label>
+        <category>
+            <name>Success</name>
+        </category>
+    </statuses>
+</Flow>

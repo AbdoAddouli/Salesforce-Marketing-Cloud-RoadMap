@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Data Extension Sync Log</label>
+    <pluralLabel>Data Extension Sync Logs</pluralLabel>
+    <description>The audit record every import, query, merge and consent action writes to. Row counts and validation results per run, so a half-load is caught before a send.</description>
+    <visibility>Public</visibility>
+</CustomObject>

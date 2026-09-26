@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <label>Status  c</label>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition><value><fullName>OptedIn</fullName><label>OptedIn</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>OptedOut</fullName><label>OptedOut</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>Pending</fullName><label>Pending</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>Transferred</fullName><label>Transferred</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>Expired</fullName><label>Expired</label></value></valueSetDefinition>
+    </valueSet>
+    <trackTrending>false</trackTrending>
+</CustomField>

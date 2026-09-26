@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customMetadataType>true</customMetadataType>
+    <label>Campaign Member Sync</label>
+    <pluralLabel>Campaign Member Syncs</pluralLabel>
+    <description>Direction of truth per campaign member sync. Declaring which side owns which field here is what stops the CRM and the engagement layer updating each other on a timer forever.</description>
+    <visibility>Public</visibility>
+</CustomObject>

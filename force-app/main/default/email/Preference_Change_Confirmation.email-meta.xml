@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomEmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>One-click unsubscribe confirmation. Transactional, so it is exempt from marketing consent and must be sent even to someone who has opted out. One click from this email has to reach the preference centre and change the consent state, not only stop the next send.</description>
+    <emailTemplate>
+        <name>Preference_Change_Confirmation</name>
+        <subject>Your communication preferences are updated</subject>
+    </emailTemplate>
+    <isActive>true</isActive>
+    <isDefaultBodyActive>false</isDefaultBodyActive>
+    <label>Preference Change Confirmation</label>
+    <name>Preference_Change_Confirmation</name>
+    <showInSetup>true</showInSetup>
+    <templateType>custom</templateType>
+    <templateBody>
+        <style>
+            body { font-family: Arial, sans-serif; color: #16325c; }
+            .card { border: 1px solid #d8dde6; border-radius: 8px; padding: 24px; }
+            .muted { color: #5c6b7a; font-size: 12px; }
+        </style>
+        <div class="card">
+            <p>Hello,</p>
+            <p>
+                We have updated how we may contact you. Your choice takes effect immediately for
+                future marketing messages, and it applies across every channel you selected.
+            </p>
+            <p>
+                You can review or change your preferences at any time at
+                <a href="{!PreferencesUrl}">your preference centre</a>.
+            </p>
+            <p class="muted">
+                You are receiving this message to confirm your request. Changing your preferences
+                does not affect service messages such as receipts or security notices, which are
+                sent because they concern an existing transaction.
+            </p>
+        </div>
+    </templateBody>
+</CustomEmailTemplate>

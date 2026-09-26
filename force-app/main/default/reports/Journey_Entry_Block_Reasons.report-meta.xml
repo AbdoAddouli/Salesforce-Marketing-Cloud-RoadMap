@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregations>24</aggregations>
+    <columns>
+        <columns>Journey__c</columns>
+        <columns>Reason__c</columns>
+        <aggregatedColumns>
+            <column>field</column>
+            <column>COUNT(Id)</column>
+            <column>Blocked</column>
+            <isCalculated>true</isCalculated>
+        </aggregatedColumns>
+    </columns>
+    <description>Blocked journey entries grouped by the reason recorded on the log. This is the report that identifies a consent source which stopped syncing or a frequency cap that has become too tight, both of which are invisible in the send rate.</description>
+    <filter>
+        <field>Decision__c</field>
+        <operator>EQUALS</operator>
+        <value>Blocked</value>
+    </filter>
+    <grouping>
+        <columnToGroup>Journey__c</columnToGroup>
+        <dateColumnToGroup>EvaluatedAt__c</dateColumnToGroup>
+        <groupings>
+            <grouping>
+                <columnToGroup>Journey__c</columnToGroup>
+                <dateColumnToGroup>EvaluatedAt__c</dateColumnToGroup>
+            </grouping>
+        </groupings>
+    </grouping>
+    <name>Journey_Entry_Block_Reasons</name>
+    <reportType>objects</reportType>
+    <scope>object</scope>
+</Report>

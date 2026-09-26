@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Contact Master</label>
+    <pluralLabel>Contact Masters</pluralLabel>
+    <description>The unified profile. One row per human, the CRM-side mirror of the Data 360 unified profile and the system of record the services read.</description>
+    <visibility>Public</visibility>
+</CustomObject>

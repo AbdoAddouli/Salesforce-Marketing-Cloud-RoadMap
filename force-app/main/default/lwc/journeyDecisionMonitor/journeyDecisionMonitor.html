@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="Journey entry decisions" icon-name="utility:timeline">
+        <div class="slds-var-p-horizontal_medium">
+            <p class="slds-text-body_small slds-text-color_weak">
+                Every decision is logged, allowed or blocked. This reads the log, not the journey.
+            </p>
+            <template for:each={decisions} for:item="d">
+                <div key={d.id} class="slds-var-m-bottom_small slds-grid slds-wrap slds-gutters_x-small">
+                    <div class="slds-col slds-size_4">
+                        <p class="slds-text-body_small slds-text-color_weak">{d.journey}</p>
+                        <p class="slds-text-title_bold">{d.evaluatedAt}</p>
+                    </div>
+                    <div class="slds-col slds-size_2">
+                        <span class={d.decisionClass}>{d.decision}</span>
+                    </div>
+                    <div class="slds-col slds-size_6">
+                        <p class="slds-text-body_small">{d.reason}</p>
+                        <template if:true={d.frequencyCapApplied}>
+                            <p class="slds-text-body_small slds-text-color_error">
+                                Frequency cap applied
+                            </p>
+                        </template>
+                    </div>
+                </div>
+            </template>
+            <template if:true={hasDecisions}>
+                <p class="slds-text-body_small slds-text-color_weak slds-var-m-top_small">
+                    {blockedCount} blocked of {decisions.length} in the last 24 hours.
+                </p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

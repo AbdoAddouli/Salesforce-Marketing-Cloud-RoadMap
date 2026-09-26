@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source__c</fullName>
+    <label>Source  c</label>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition><value><fullName>WebBanner</fullName><label>WebBanner</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>App</fullName><label>App</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>CallCentre</fullName><label>CallCentre</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>Import</fullName><label>Import</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>Keyword</fullName><label>Keyword</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>CRM</fullName><label>CRM</label></value></valueSetDefinition>
+    </valueSet>
+    <trackTrending>false</trackTrending>
+</CustomField>

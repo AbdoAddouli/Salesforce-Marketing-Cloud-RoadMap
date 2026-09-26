@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Direction__c</fullName>
+    <label>Direction</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition><value><fullName>CRM_to_Engagement</fullName><label>CRM_to_Engagement</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>Engagement_to_CRM</fullName><label>Engagement_to_CRM</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>One_Way</fullName><label>One_Way</label></value></valueSetDefinition>
+    </valueSet>
+</CustomField>

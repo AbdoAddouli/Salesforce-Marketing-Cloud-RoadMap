@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <label>Campaign Loyalty Sync</label>
+    <protected>false</protected>
+    <values>
+        <field>Campaign_Record_Type__c</field>
+        <value xsi:type="xsd:string">Loyalty</value>
+        <field>Direction__c</field>
+        <value xsi:type="xsd:string">CRM_to_Engagement</value>
+        <field>Push_Fields__c</field>
+        <value xsi:type="xsd:string">CampaignMember.CampaignId,CampaignMember.ContactId,CampaignMember.Status,Contact_Master__c.ProfileMatchRate__c</value>
+        <field>Pull_Fields__c</field>
+        <value xsi:type="xsd:string"></value>
+        <field>Interval_Hours__c</field>
+        <value xsi:type="xsd:int">24</value>
+        <field>Owned_By_Queue__c</field>
+        <value xsi:type="xsd:string">LoyaltyOps</value>
+        <field>Is_Enabled__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+</CustomMetadata>

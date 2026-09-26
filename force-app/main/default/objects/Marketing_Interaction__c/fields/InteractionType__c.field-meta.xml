@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InteractionType__c</fullName>
+    <label>InteractionType  c</label>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition><value><fullName>Send</fullName><label>Send</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>Open</fullName><label>Open</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>Click</fullName><label>Click</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>Conversion</fullName><label>Conversion</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>Complaint</fullName><label>Complaint</label></value></valueSetDefinition>
+        <valueSetDefinition><value><fullName>Unsubscribe</fullName><label>Unsubscribe</label></value></valueSetDefinition>
+    </valueSet>
+    <trackTrending>false</trackTrending>
+</CustomField>

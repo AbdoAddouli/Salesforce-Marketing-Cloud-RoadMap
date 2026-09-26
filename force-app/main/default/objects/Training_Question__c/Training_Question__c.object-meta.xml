@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Training Question</label>
+    <pluralLabel>Training Questions</pluralLabel>
+    <description>The question bank behind the mock exam, held in the org so the blueprint weights and the bank can be reviewed by the same pull request that changes them.</description>
+    <visibility>Public</visibility>
+</CustomObject>

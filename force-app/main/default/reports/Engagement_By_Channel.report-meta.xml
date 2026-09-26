@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregations>24</aggregations>
+    <columns>
+        <columns>Channel__c</columns>
+        <columns>InteractionType__c</columns>
+        <aggregatedColumns>
+            <column>field</column>
+            <column>COUNT(Id)</column>
+            <column>Interactions</column>
+            <isCalculated>true</isCalculated>
+        </aggregatedColumns>
+    </columns>
+    <description>Interaction counts by channel and type. Built on Marketing_Interaction__c rather than on campaign membership, because a campaign-level count cannot answer a per-contact question such as how many times this person was messaged.</description>
+    <filter>
+        <field>InteractionDate__c</field>
+        <operator>LAST_N_DAYS</operator>
+        <value>30</value>
+    </filter>
+    <grouping>
+        <columnToGroup>Channel__c</columnToGroup>
+        <dateColumnToGroup>InteractionDate__c</dateColumnToGroup>
+        <groupings>
+            <grouping>
+                <columnToGroup>Channel__c</columnToGroup>
+                <dateColumnToGroup>InteractionDate__c</dateColumnToGroup>
+            </grouping>
+        </groupings>
+    </grouping>
+    <name>Engagement_By_Channel</name>
+    <reportType>objects</reportType>
+    <scope>object</scope>
+</Report>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <approvalStep name="Marketing Ops Review">
+        <assignedApprover type="SpecifyOnEntry">
+            <role>Marketing Operations Manager</role>
+        </assignedApprover>
+        <description>Marketing Ops confirm the audience definition, the consent basis, the send window and the suppression list before anything leaves the org.</description>
+        <name>Marketing Ops Review</name>
+    </approvalStep>
+    <approvalStep name="Consent Review">
+        <assignedApprover type="SpecifyOnEntry">
+            <role>Privacy Manager</role>
+        </assignedApprover>
+        <description>Privacy confirm the lawful basis and that the audience is filtered to current consent. A campaign with an unresolved opt-out does not get approved.</description>
+        <name>Consent Review</name>
+    </approvalStep>
+    <criteria>Campaign.Is_Approved_To_Launch__c equals true</criteria>
+    <description>Two-step gate on campaign launch. The approval is a record, which is the point: the decision has an owner and a date, and can be audited after a deliverability incident.</description>
+    <emailTemplate>Campaign_Launch_Approval_Notification</emailTemplate>
+    <fieldUpdate>Campaign.Launch_Approved_Date__c</fieldUpdate>
+    <fullName>Campaign_Launch_Approval</fullName>
+    <isDefaultTargetApprovalProcess>false</isDefaultTargetApprovalProcess>
+    <label>Campaign Launch Approval</label>
+    <lockNextApprovalProcess>false</lockNextApprovalProcess>
+    <nameField>Is_Approved_To_Launch__c</nameField>
+    <processType>Standard</processType>
+    <rejectDecision>Campaign_Launch_Rejected</rejectDecision>
+    <ruleEntryCriteria>
+        <criteria>Campaign.Is_Approved_To_Launch__c equals true</criteria>
+        <criteriaType>Filter</criteriaType>
+        <filterField>Campaign.Is_Approved_To_Launch__c</filterField>
+        <filterOperator>EqualTo</filterOperator>
+        <filterValue>true</filterValue>
+        <isActive>true</isActive>
+    </ruleEntryCriteria>
+    <skipEntryCriteria>
+        <criteriaType>Filter</criteriaType>
+        <filterField>Campaign.Is_Approved_To_Launch__c</filterField>
+        <filterOperator>EqualTo</filterOperator>
+        <filterValue>true</filterValue>
+        <isActive>true</isActive>
+    </skipEntryCriteria>
+    <status>Active</status>
+    <targetObject>Campaign</targetObject>
+</ApprovalProcess>

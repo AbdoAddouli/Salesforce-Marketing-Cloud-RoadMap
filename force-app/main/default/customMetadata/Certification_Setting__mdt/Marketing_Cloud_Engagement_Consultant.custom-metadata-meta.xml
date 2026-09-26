@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <label>Marketing Cloud Engagement Consultant</label>
+    <protected>false</protected>
+    <values>
+        <field>Exam_Code__c</field>
+        <value xsi:type="xsd:string">Marketing_Cloud_Engagement_Consultant</value>
+        <field>Pass_Score__c</field>
+        <value xsi:type="xsd:int">65</value>
+        <field>Prerequisite_Exam__c</field>
+        <value xsi:type="xsd:string"></value>
+        <field>Verified_On__c</field>
+        <value xsi:type="xsd:date">2026-09-26</value>
+        <field>Source_Url__c</field>
+        <value xsi:type="xsd:string">https://trailhead.salesforce.com/help/en/trailhead</value>
+        <field>Verification_Note__c</field>
+        <value xsi:type="xsd:string">Pass score and prerequisite recorded from the roadmap working notes and NOT yet confirmed against the current official exam outline. Is_Verified__c is false until they are.</value>
+        <field>Is_Verified__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+</CustomMetadata>
