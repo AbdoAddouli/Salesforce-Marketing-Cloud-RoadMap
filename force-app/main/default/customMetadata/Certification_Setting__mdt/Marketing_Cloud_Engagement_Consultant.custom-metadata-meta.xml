@@ -6,15 +6,15 @@
         <field>Exam_Code__c</field>
         <value xsi:type="xsd:string">Marketing_Cloud_Engagement_Consultant</value>
         <field>Pass_Score__c</field>
-        <value xsi:type="xsd:int">65</value>
+        <value xsi:type="xsd:int">67</value>
         <field>Prerequisite_Exam__c</field>
-        <value xsi:type="xsd:string"></value>
+        <value xsi:type="xsd:string">Marketing_Cloud_Engagement_Administrator</value>
         <field>Verified_On__c</field>
         <value xsi:type="xsd:date">2026-09-26</value>
         <field>Source_Url__c</field>
-        <value xsi:type="xsd:string">https://trailhead.salesforce.com/help/en/trailhead</value>
+        <value xsi:type="xsd:string">https://trailhead.salesforce.com/credentials/marketingcloudconsultant</value>
         <field>Verification_Note__c</field>
-        <value xsi:type="xsd:string">Pass score and prerequisite recorded from the roadmap working notes and NOT yet confirmed against the current official exam outline. Is_Verified__c is false until they are.</value>
+        <value xsi:type="xsd:string">Prerequisite confirmed on the official Trailhead credential page: the Salesforce Certified Marketing Cloud Engagement Administrator credential is required. The pass score is reported as 67% across third-party sources but Salesforce does not publish it on that page, so Is_Verified__c stays false until an official exam guide is located. The legacy 2018 Marketing Cloud Consultant guide quoted 68% with a Marketing Cloud Email Specialist prerequisite and is superseded.</value>
         <field>Is_Verified__c</field>
         <value xsi:type="xsd:boolean">false</value>
     </values>

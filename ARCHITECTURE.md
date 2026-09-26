@@ -118,9 +118,17 @@ does not create a second profile.
 Run them in an org with the project deployed. `npm test` covers the LWC only and
 needs `node_modules`, which is not installed in this checkout.
 
-## Unverified
+## Certification metadata
 
-`Certification_Setting__mdt` records the pass mark and prerequisite for both
-exams with `Is_Verified__c = false`. Those values come from working notes and
-have not been confirmed against the current official exam outline. Confirm them
-before treating any of them as fact, in the org and in `docs/assets/examfacts.js`.
+`Certification_Setting__mdt` holds one record per exam, and each record states
+where its numbers came from.
+
+The **Marketing Cloud Next Consultant** record is verified: `Is_Verified__c` is
+`true`, and the pass mark (72%) and empty prerequisite come from the official
+Salesforce Help exam guide, article `005387657`, rather than from working notes.
+
+The **Marketing Cloud Engagement Consultant** record is deliberately still
+`Is_Verified__c = false`. Its prerequisite is confirmed on the official Trailhead
+credential page, but the 67% pass mark is only reported by third-party sources,
+and Salesforce does not publish it. It stays unverified until an official exam
+guide is found.

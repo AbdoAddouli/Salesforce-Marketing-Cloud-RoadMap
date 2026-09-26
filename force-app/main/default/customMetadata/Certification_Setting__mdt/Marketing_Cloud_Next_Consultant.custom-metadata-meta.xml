@@ -6,16 +6,16 @@
         <field>Exam_Code__c</field>
         <value xsi:type="xsd:string">Marketing_Cloud_Next_Consultant</value>
         <field>Pass_Score__c</field>
-        <value xsi:type="xsd:int">65</value>
+        <value xsi:type="xsd:int">72</value>
         <field>Prerequisite_Exam__c</field>
-        <value xsi:type="xsd:string">Marketing_Cloud_Engagement_Administrator</value>
+        <value xsi:type="xsd:string"></value>
         <field>Verified_On__c</field>
         <value xsi:type="xsd:date">2026-09-26</value>
         <field>Source_Url__c</field>
-        <value xsi:type="xsd:string">https://trailhead.salesforce.com/help/en/trailhead</value>
+        <value xsi:type="xsd:string">https://help.salesforce.com/s/articleView?id=005387657&amp;language=en_US&amp;type=1</value>
         <field>Verification_Note__c</field>
-        <value xsi:type="xsd:string">Pass score and prerequisite recorded from the roadmap working notes and NOT yet confirmed against the current official exam outline. Is_Verified__c is false until they are.</value>
+        <value xsi:type="xsd:string">Verified against the official Salesforce Help exam guide (article 005387657, aligned to the Summer '26 release): 60 multiple-choice questions plus up to 5 unscored, 105 minutes, 72% passing score, no prerequisite. Section weights are Campaign Design Flow Orchestration and Content 30%, Data Modeling Identity Resolution and Segmentation 25%, Platform Setup and Governance 13%, Consent 13%, Agentforce and AI Innovation 11%, Analytics and Performance Insights 8%. Agrees with docs/assets/examfacts.js.</value>
         <field>Is_Verified__c</field>
-        <value xsi:type="xsd:boolean">false</value>
+        <value xsi:type="xsd:boolean">true</value>
     </values>
 </CustomMetadata>
